@@ -91,11 +91,9 @@ public class MinStack {
             System.out.print(stk[i]+" ");
         }
     }
-    public void push(int x)
-    {
+    public void push(int x) throws Exception {
         if (isFull()){
-            System.out.println("Overflow");
-            System.exit(-1);
+            throw new Exception("Overflow");
         }
         if(minIndex ==null || x<= stk[minIndex]){
             minIndex =top+1;
