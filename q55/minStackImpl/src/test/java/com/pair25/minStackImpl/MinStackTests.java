@@ -38,7 +38,7 @@ class MinStackTests {
 		Assertions.assertEquals(topValue, 5);
 	}
 	
-	S
+	
 	
 
 }
