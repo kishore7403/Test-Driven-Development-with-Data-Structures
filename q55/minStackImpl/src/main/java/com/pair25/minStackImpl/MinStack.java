@@ -61,19 +61,18 @@ public class MinStack {
         return top == -1;
     }
 
-    public int top(){
+    public int top() throws Exception{
         if(isEmpty()){
-            System.out.println("Stack Empty");
+            throw new Exception("Stack Empty");
         }
         else {
             return stk[top];
         }
-        return -1;
     }
 
-    public int pop(){
+    public int pop() throws Exception {
         if(isEmpty()){
-            System.out.println("Stack Empty");
+            throw new Exception("Stack Empty");
         }
         else {
             int popedValue=stk[minIndex];
@@ -83,7 +82,6 @@ public class MinStack {
             top--;
             return popedValue;
         }
-        return -1;
     }
 
     public void show(){
