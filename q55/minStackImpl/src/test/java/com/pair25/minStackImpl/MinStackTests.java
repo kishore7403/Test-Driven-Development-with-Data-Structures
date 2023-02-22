@@ -10,10 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class MinStackTests {
 	
 	
-	
-	
 	@Test
-	public void testStackPushPositiveCase1() {
+	public void testStackPushPositiveCase1() throws Exception {
 		MinStack minStack = new MinStack(2);
 		minStack.push(4);
 		int arr[] =   minStack.getStk();
@@ -21,7 +19,7 @@ class MinStackTests {
 	}
 	
 	@Test
-	public void testStackPopPositiveCase1() {
+	public void testStackPopPositiveCase1() throws Exception {
 		MinStack minStack = new MinStack(2);
 		minStack.push(4);
 		minStack.push(5);
@@ -30,12 +28,22 @@ class MinStackTests {
 	}
 	
 	@Test
-	public void testStackTopPositiveCase1() {
+	public void testStackTopPositiveCase1() throws Exception {
 		MinStack minStack  = new MinStack(2);
 		minStack.push(4);
 		minStack.push(5);
 		int topValue = minStack.top();
 		Assertions.assertEquals(topValue, 5);
+	}
+	
+	@Test
+	public void testStackOverflowCase1() throws Exception {
+		MinStack minStack = new MinStack(2);
+		minStack.push(4);
+		minStack.push(5);
+		Assertions.assertThrows(Exception.class, () -> {minStack.push(1);});
+		
+		
 	}
 	
 	
