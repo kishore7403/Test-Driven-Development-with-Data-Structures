@@ -7,10 +7,9 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MinStackImplApplicationTests {
+class MinStackTests {
 	
-	@InjectMocks
-	MinStackImplApplication minStackImpl;
+	
 	
 	
 	@Test
@@ -32,7 +31,7 @@ class MinStackImplApplicationTests {
 	
 	@Test
 	public void testStackTopPositiveCase1() {
-		MinStack minStack = new MinStack(2);
+		MinStack minStack  = new MinStack(2);
 		minStack.push(4);
 		minStack.push(5);
 		int topValue = minStack.top();

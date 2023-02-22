@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MinStackImplApplication {
+public class MinStack {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MinStackImplApplication.class, args);
+		SpringApplication.run(MinStack.class, args);
 	}
 
 }
