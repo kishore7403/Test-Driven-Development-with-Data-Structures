@@ -15,7 +15,7 @@ class MinStackImplApplicationTests {
 	
 	@Test
 	public void testStackPushPositiveCase1() {
-		MinStack minStack = new MinStack();
+		MinStack minStack = new MinStack(2);
 		minStack.push(4);
 		int arr[] =   minStack.getStk();
 		Assertions.assertEquals(arr[0], 4);
@@ -23,7 +23,7 @@ class MinStackImplApplicationTests {
 	
 	@Test
 	public void testStackPopPositiveCase1() {
-		MinStack minStack = new MinStack();
+		MinStack minStack = new MinStack(2);
 		minStack.push(4);
 		minStack.push(5);
 		int minValue = minStack.pop();
@@ -32,7 +32,7 @@ class MinStackImplApplicationTests {
 	
 	@Test
 	public void testStackTopPositiveCase1() {
-		MinStack minStack = new MinStack();
+		MinStack minStack = new MinStack(2);
 		minStack.push(4);
 		minStack.push(5);
 		int topValue = minStack.top();
