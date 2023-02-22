@@ -46,6 +46,28 @@ class MinStackTests {
 		
 	}
 	
+	@Test
+	public void testStackUnderflowCase1() throws Exception {
+		MinStack minStack = new MinStack(2);
+		Assertions.assertThrows(Exception.class, () -> {minStack.pop();});
+	}
+	
+	@Test
+	public void testStackSameInputCase1() throws Exception {
+		MinStack minStack = new MinStack(2);
+		minStack.push(0);
+		minStack.push(0);
+		minStack.pop();
+		int minValue = minStack.pop();
+		Assertions.assertEquals(minValue, 0);
+	}
+	
+	@Test
+	public void testStackTopInEmptyStack() {
+		MinStack minStack = new MinStack(2);
+		Assertions.assertThrows(Exception.class, ()->{minStack.top();});
+	}
+	
 	
 	
 
