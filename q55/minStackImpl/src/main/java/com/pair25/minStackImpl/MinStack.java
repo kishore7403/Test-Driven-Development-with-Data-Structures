@@ -14,11 +14,14 @@ public class MinStack {
     public MinStack(){
 
     }
-    MinStack(int size){
+
+    MinStack(int size) throws IllegalArgumentException{
+        if(size<0){throw new IllegalArgumentException("Negative size");}
         stk=new int[size];
         capacity=size;
         top=-1;
         minIndex =null;
+
     }
 
     public int[] getStk() {
