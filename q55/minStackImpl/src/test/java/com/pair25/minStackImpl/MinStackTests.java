@@ -77,9 +77,7 @@ class MinStackTests {
 	
 	@Test
 	public void testStackWithNegativeSize() {
-		MinStack minStack = new MinStack(-7);
-		
-		Assertions.assertThrows(Exception.class, () -> {minStack.push(4);});
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {MinStack minStack = new MinStack(-7);});
 	}
 	
 	
