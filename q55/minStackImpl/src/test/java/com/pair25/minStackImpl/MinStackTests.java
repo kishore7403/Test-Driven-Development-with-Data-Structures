@@ -68,6 +68,19 @@ class MinStackTests {
 		Assertions.assertThrows(Exception.class, ()->{minStack.top();});
 	}
 	
+	@Test
+	public void testStackWithZeroSize() {
+		MinStack minStack = new MinStack(0);
+		
+		Assertions.assertThrows(Exception.class, () -> {minStack.push(4);});
+	}
+	
+	@Test
+	public void testStackWithNegativeSize() {
+		MinStack minStack = new MinStack(-7);
+		
+		Assertions.assertThrows(Exception.class, () -> {minStack.push(4);});
+	}
 	
 	
 
