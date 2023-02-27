@@ -28,10 +28,13 @@ class TreeUtilitiesTest {
 	@Test
 	void testBinaryTreeConstructionPositiveCase1() {
 		//ARRANGE
-		int[][] dummyMatrix = {
-                { 0, 0, 0, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0 },
-                { 0, 0, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0 }, { 1, 1, 1, 1, 1, 0 }
+		boolean[][] dummyMatrix = {
+				{ false, false, false, false, false, false },
+                { true, false, false, false, true, false },
+                { false, false, false, true, false, false },
+                { false, false, false, false, false, false },
+                { false, false, false, false, false, false },
+                { true, true, true, true, true, false }
         };
       Node rootNode = new Node(dummyMatrix.length);
       
