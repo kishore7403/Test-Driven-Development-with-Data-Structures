@@ -28,19 +28,16 @@ class TreeUtilitiesTest {
 	@Test
 	void testBinaryTreeConstructionPositiveCase1() {
 		//ARRANGE
-      int[][] dummyMatrix =
-      {
-              { 0, 0, 0, 0, 0 },
-              { 1, 0, 0, 0, 0 },
-              { 0, 0, 0, 1, 0 },
-              { 0, 0, 0, 0, 0 },
-              { 1, 1, 1, 1, 0 }
-      };
+		int[][] dummyMatrix = {
+                { 0, 0, 0, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0 },
+                { 0, 0, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0, 0 }, { 1, 1, 1, 1, 1, 0 }
+        };
       Node rootNode = new Node(dummyMatrix.length);
       
       //ACT
       rootNode = treeUtil.constructTree(dummyMatrix);
-      treeUtil.inorderTraversal(rootNode);
+      treeUtil.inorderTraverse(rootNode);
       //ASSERT
       Assertions.assertEquals("0-1-4-5-3-2-", treeUtil.displayTree());
       
