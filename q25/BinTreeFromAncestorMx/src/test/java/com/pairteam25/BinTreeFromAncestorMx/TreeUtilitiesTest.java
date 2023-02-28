@@ -79,12 +79,13 @@ class TreeUtilitiesTest {
 	void testBinaryTreeConstructionInvalidTestCase3() throws Exception {
 		//ARRANGE
 		boolean[][] dummyMatrix = null;
-		Node rootNode = new Node(dummyMatrix.length);
+		Node rootNode = new Node(0);
     
 
     //ACT AND ASSERT
     Assertions.assertThrows(Exception.class, ()->{ treeUtil.constructTree(dummyMatrix);});
     
 	}
+  
 
 }
