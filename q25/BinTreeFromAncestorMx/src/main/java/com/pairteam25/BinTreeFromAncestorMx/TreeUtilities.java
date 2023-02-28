@@ -39,6 +39,11 @@ public class TreeUtilities {
 					throw new IllegalArgumentException("input matrix should not be empty");     
 		}
 		
+		//validating if input matrix is not null
+		if (ancestorBooleanMatrix == null){          
+			throw new IllegalArgumentException("input matrix should not be null");     
+			} 
+		
 		//conversion Matrix
 		int[][] ancestorMatrix = new int[ancestorBooleanMatrix.length][ancestorBooleanMatrix.length];
 		
