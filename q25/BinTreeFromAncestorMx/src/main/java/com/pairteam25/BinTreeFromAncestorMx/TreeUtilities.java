@@ -54,6 +54,10 @@ public class TreeUtilities {
 				if(i==j && ancestorBooleanMatrix[i][j]==true)
 					throw new IllegalArgumentException("diagonal of an ancestor matrix cannot be true");
 				
+				 if (ancestorBooleanMatrix[i][j] == true && ancestorBooleanMatrix[j][i] == true) {
+	                    throw new IllegalArgumentException("cyclic relationship detected in the ancestor matrix");
+	                }
+				
 				if(ancestorBooleanMatrix[i][j]==true)
 				{
 					trueCount++;
