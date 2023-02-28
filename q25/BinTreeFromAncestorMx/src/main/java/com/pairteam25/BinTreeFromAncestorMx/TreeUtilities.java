@@ -50,6 +50,10 @@ public class TreeUtilities {
 		for(int i =0; i< ancestorBooleanMatrix.length; i++) {
 			for(int j=0; j<ancestorBooleanMatrix.length;j++) {
 				
+				//validating diagonals
+				if(i==j && ancestorBooleanMatrix[i][j]==true)
+					throw new IllegalArgumentException("diagonal of an ancestor matrix cannot be true");
+				
 				if(ancestorBooleanMatrix[i][j]==true)
 				{
 					trueCount++;
