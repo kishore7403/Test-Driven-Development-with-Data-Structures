@@ -30,17 +30,29 @@ public class TreeUtilities {
 	
 	public static Node constructTree(boolean[][] ancestorBooleanMatrix)    {  
 		
+		//validation variables
+				int trueCount=0;
+				int falseCount=0;
+		//conversion Matrix
 		int[][] ancestorMatrix = new int[ancestorBooleanMatrix.length][ancestorBooleanMatrix.length];
 		
 		for(int i =0; i< ancestorBooleanMatrix.length; i++) {
 			for(int j=0; j<ancestorBooleanMatrix.length;j++) {
 				
 				if(ancestorBooleanMatrix[i][j]==true)
+				{
+					trueCount++;
 					ancestorMatrix[i][j] = 1;
-				else
+				}else
+				{
+					falseCount++;
 					ancestorMatrix[i][j]=0;
-				
+				}				
 			}
+		}
+		
+		if(trueCount==0 || falseCount==0) {
+			throw new IllegalArgumentException("Invalid input ancestor matrix");
 		}
 
 		
