@@ -104,6 +104,23 @@ class TreeUtilitiesTest {
    Assertions.assertThrows(Exception.class, ()->{ treeUtil.constructTree(dummyMatrix);});
    
 	}
-  
+  void testBinaryTreeConstructionInvalidCase5() throws Exception {
+		//ARRANGE
+		boolean[][] dummyMatrix = {
+			  { false, true, false, false, false, false },
+              { true, false, false, false, true, false },
+              { false, false, false, true, false, false },
+              { false, false, false, false, false, false },
+              { false, false, false, false, false, false },
+              { true, true, true, true, true, false }
+      };
+		
+    Node rootNode = new Node(dummyMatrix.length);
+   
+    //ASSERT
+    Assertions.assertThrows(Exception.class, ()->{ treeUtil.constructTree(dummyMatrix);});
+    
+    
+	}
 
 }
