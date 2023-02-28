@@ -64,5 +64,16 @@ class TreeUtilitiesTest {
       Assertions.assertThrows(Exception.class, ()->{ treeUtil.constructTree(dummyMatrix);});
       
 	}
+  @Test
+	void testBinaryTreeConstructionInvalidTestCase2() throws Exception {
+		//ARRANGE
+		boolean[][] dummyMatrix = {};
+		Node rootNode = new Node(dummyMatrix.length);
+      
+  
+      //ACT AND ASSERT
+      Assertions.assertThrows(Exception.class, ()->{ treeUtil.constructTree(dummyMatrix);});
+      
+	}
 
 }
