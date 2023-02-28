@@ -33,6 +33,12 @@ public class TreeUtilities {
 		//validation variables
 				int trueCount=0;
 				int falseCount=0;
+				
+		//validating if input matrix is not empty
+		if(ancestorBooleanMatrix.length == 0){           
+					throw new IllegalArgumentException("input matrix should not be empty");     
+		}
+		
 		//conversion Matrix
 		int[][] ancestorMatrix = new int[ancestorBooleanMatrix.length][ancestorBooleanMatrix.length];
 		
